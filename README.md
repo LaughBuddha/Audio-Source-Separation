@@ -13,22 +13,11 @@ Non-negative matrix factorization (NMF) is one of the classical methods used to 
 
 The fundamental process of NMF is factorizing the matrix V containing the audio data spectrogram into two separate matrices referred to as bases (W ) and activations (H ) respectively. All three matrices V, W, H are non-negative.
 
-$\mathrm{V}_{m \times n} = W_{m \times r}H_{r \times n}$
+V<sub>m x n</sub> = W<sub>m x r</sub>H<sub>r x n</sub>
 
-$r = min(m, n)$ is the number of source components
+r = min(m, n) is the number of source components
 
 NP-hard problem and no close form solution
-
-KL divergence cost function optimized 
-$D_{KL}(\mathrm{V} \parallel U) = \sum\left(V \odot  \log \frac{V}{U} - V + U \right)$
-
-where $\mathrm{U} \approx WH$
-
-W and H are estimated by the following equantions
-
-$W \leftarrow W \odot \frac{\frac{V}{U}\times \mathrm{H}^T}{J \times \mathrm{H}^{T}}$
-
-$H \leftarrow H \odot \frac{\mathrm{W}^{T} \times \frac{V}{U} }{\mathrm{W}^{T} \times J}$
 
 # Deep Learning method - Open Unmix
 
