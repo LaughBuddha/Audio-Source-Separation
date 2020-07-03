@@ -9,7 +9,26 @@ Full Report: [Audio Source Separation.pdf](https://github.com/LaughBuddha/Audio-
 MUSDB18 is the largest freely available dataset for source separation till date. It consists of 150 full-length music tracks (totalling 10 hours) from different genres along with their iso- lated drums, bass, vocals and accompaniment stems [5]. The training set is comprised of 100 tracks, with the remaining 50 tracks constituting the test set. Each instance in the dataset is a 44.1kHz stereo track composed of the full mix plus four stems.
 
 # Non deep learning method - Non Negative Matrix Factorization
+Non-negative matrix factorization (NMF) is one of the classical methods used to decompose the magnitude of time-frequency distributions in audio processing. 
 
+The fundamental process of NMF is factorizing the matrix V containing the audio data spectrogram into two separate matrices referred to as bases (W ) and activations (H ) respectively. All three matrices V, W, H are non-negative.
+
+$\mathrm{V}_{m \times n} = W_{m \times r}H_{r \times n}$
+
+$r = min(m, n)$ is the number of source components
+
+NP-hard problem and no close form solution
+
+KL divergence cost function optimized 
+$D_{KL}(\mathrm{V} \parallel U) = \sum\left(V \odot  \log \frac{V}{U} - V + U \right)$
+
+where $\mathrm{U} \approx WH$
+
+W and H are estimated by the following equantions
+
+$W \leftarrow W \odot \frac{\frac{V}{U}\times \mathrm{H}^T}{J \times \mathrm{H}^{T}}$
+
+$H \leftarrow H \odot \frac{\mathrm{W}^{T} \times \frac{V}{U} }{\mathrm{W}^{T} \times J}$
 
 # Deep Learning method - Open Unmix
 
