@@ -30,4 +30,6 @@ Open-Unmix is based on a three-layer bidirectional deep LSTM. The model learns t
 See full implementation [here](https://github.com/LaughBuddha/Audio-Source-Separation/blob/master/Open_Unmix_Implementation.ipynb)
 
 # References
-
+1. [MUSDB18 dataset](https://sigsep.github.io/datasets/musdb.html#musdb18-compressed-stems)
+2. [NMF](https://www.audiolabs-erlangen.de/content/05-fau/professor/00-mueller/03-publications/2019_LopezSerranoDOM_NMF_DAFx.pdf)
+3. [Open Unmix](https://joss.theoj.org/papers/10.21105/joss.01667)
