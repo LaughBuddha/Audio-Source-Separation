@@ -1,5 +1,9 @@
 # Audio Source Separation using deep learning
 
+Objective: Separate a mixture audio track into individual stems corresponding to drums, bass, vocals, and other instruments. Using a classical technique in non-negative matrix factorization and a state-of-the-art deep learning model architecture in open unmix, the above task is acheived.
+
+All the code is implemented in PyTorch and Python. 
+
 Watch video here: https://drive.google.com/file/d/1mQYxrSR_2vEwZfQ6rOPChYq28Bkrh5fx/view \
 \
 Full Report: [Audio Source Separation.pdf](https://github.com/LaughBuddha/Audio-Source-Separation/blob/master/Audio%20Source%20Separation.pdf)
