@@ -19,10 +19,15 @@ r = min(m, n) is the number of source components
 
 NP-hard problem and no close form solution
 
+See full implementation [here](https://github.com/LaughBuddha/Audio-Source-Separation/blob/master/NMF_implementation.ipynb)
+
 # Deep Learning method - Open Unmix
 
 Open-Unmix is a deep neural network reference implementation for music source separation.
 
 Open-Unmix is based on a three-layer bidirectional deep LSTM. The model learns to predict the magnitude spectrogram of a target, like vocals, from the magnitude spectrogram of a mixture input. Internally, the prediction is obtained by applying a mask on the input. The model is optimized in the magnitude domain using mean squared error and the actual separation is done in a post-processing step involving a multichannel wiener filter implemented using norbert. To perform separation into multiple sources, multiple models are trained for each particular target. While this makes the training less comfortable, it allows great flexibility to customize the training data for each target source.
 
+See full implementation [here](https://github.com/LaughBuddha/Audio-Source-Separation/blob/master/Open_Unmix_Implementation.ipynb)
+
+# References
 
